@@ -472,15 +472,15 @@ it.each([
   ['8112', ''],
   ['8200', 'PRODUCT URL'],
   ['90', 'INTERNAL'],
-  ['91', 'INTERNAL'],
+  ['91', 'ODOO ID'],
   ['92', 'INTERNAL'],
   ['93', 'INTERNAL'],
   ['94', 'INTERNAL'],
-  ['95', 'INTERNAL'],
-  ['96', 'INTERNAL'],
-  ['97', 'INTERNAL'],
+  ['95', 'ITEM ID'],
+  ['96', 'VIN'],
+  ['97', 'LOCATION ID'],
   ['98', 'INTERNAL'],
-  ['99', 'INTERNAL']])('%s is identified as %s', (expectedAi, expectedTitle) => {
+  ['99', 'EXTERNAL ID']])('%s is identified as %s', (expectedAi, expectedTitle) => {
   const {
     ai,
     title,

@@ -428,15 +428,21 @@ exports.parseAi = (barcode) => {
         case '0':
           return { ai: '90', title: 'INTERNAL', parser: variableLength(30) }
         case '1':
+          return { ai: '91', title: 'ODOO ID', parser: fixedLength(15) }
         case '2':
         case '3':
         case '4':
-        case '5':
-        case '6':
-        case '7':
-        case '8':
-        case '9':
           return { ai: barcode.slice(0, 2), title: 'INTERNAL', parser: variableLength(90) }
+        case '5':
+          return { ai: '95', title: 'ITEM ID', parser: fixedLength(12) }
+        case '6':
+          return { ai: '96', title: 'VIN', parser: fixedLength(17) }
+        case '7':
+          return { ai: '97', title: 'LOCATION ID', parser: fixedLength(13) }
+        case '8':
+          return { ai: barcode.slice(0, 2), title: 'INTERNAL', parser: variableLength(90) }
+        case '9':
+          return { ai: '99', title: 'EXTERNAL ID', parser: variableLength(30) }
       }
       break
   }
