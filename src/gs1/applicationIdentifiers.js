@@ -428,7 +428,7 @@ exports.parseAi = (barcode) => {
         case '0':
           return { ai: '90', title: 'INTERNAL', parser: variableLength(30) }
         case '1':
-          return { ai: '91', title: 'ODOO ID', parser: fixedLength(15) }
+          return { ai: '91', title: 'ODOO ID', parser: fixedLength(14) }
         case '2':
         case '3':
         case '4':
